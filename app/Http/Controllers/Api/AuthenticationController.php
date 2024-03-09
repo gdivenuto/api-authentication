@@ -15,7 +15,7 @@ class AuthenticationController extends Controller
     public function store()
     {
         if (Auth::attempt(['email' => request('email'), 'password' => request('password')])) {
-            // successfull authentication
+
             $user = User::find(Auth::user()->id);
 
             $user_token['token'] = $user->createToken('appToken')->accessToken;
@@ -26,7 +26,6 @@ class AuthenticationController extends Controller
                 'user' => $user,
             ], 200);
         } else {
-            // failure to authenticate
             return response()->json([
                 'success' => false,
                 'message' => 'Failed to authenticate.',
