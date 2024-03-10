@@ -1,4 +1,4 @@
-# Challenge.
+# Challenge PHP
 A continuación se describe el desarrollo de un API REST con autenticación OAuth2.0, con una integración de la API de [GHIFY](https://developers.giphy.com/docs/api/#quick-start-guide).
 
 ## Diagrama de Casos de Uso
