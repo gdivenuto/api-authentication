@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('service_name');
             $table->text('request_body')->nullable();
             $table->integer('response_status_code');
-            $table->text('response_body')->nullable();
+            $table->longText('response_body')->nullable();
             $table->ipAddress('source_ip');
             $table->timestamps();
 

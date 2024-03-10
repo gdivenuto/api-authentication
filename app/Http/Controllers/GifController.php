@@ -34,7 +34,7 @@ class GifController extends Controller
             'offset' => $offset,
         ]);
 
-        //$this->logServiceInteraction($request, $response);
+        $this->logServiceInteraction($request, $response);
 
         return $response->json();
     }
@@ -42,7 +42,7 @@ class GifController extends Controller
     public function getById(Request $request, $id)
     {
         $validator = Validator::make(['id' => $id], [
-            'id' => 'required|string' // The ID is a string. FUENTE: https://developers.giphy.com/docs/api/endpoint#get-gif-by-id
+            'id' => 'required|string' // El ID es un string. FUENTE: https://developers.giphy.com/docs/api/endpoint#get-gif-by-id
         ]);
 
         if ($validator->fails()) {
@@ -86,8 +86,6 @@ class GifController extends Controller
 
     private function logServiceInteraction(Request $request, $response)
     {
-        dd($request, $response);
-
         $user = $request->user();
         $serviceName = 'Giphy API';
         $requestBody = $request->all();
