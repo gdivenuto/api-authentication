@@ -15,7 +15,7 @@ sudo apt install php php-cli php-mbstring php-xml php-sip php-json php-mysql
 
 ### Para instalar Composer (Gestor de dependencias de PHP)
 ```bash
-sudo install composer
+sudo apt install composer
 ```
 
 ## Creación del proyecto
