@@ -56,7 +56,7 @@ DB_PASSWORD=<su_password>
 php artisan migrate
 ```
 
-### Para la Autenticación OAuth2.0 se ha utilizado el paqiete Passport de Laravel.
+### Para la Autenticación OAuth2.0 se ha utilizado el paquete Passport de Laravel.
 ```bash
 composer require laravel/passport
 ```
@@ -76,7 +76,7 @@ Se debe reemplazar: use Laravel\Sanctum\HasApiTokens; por Laravel\Passport\HasAp
 
 Se debe agregar el Trait HasApiTokens
 
-### Editar el archivo config/auth.php (para definir la rpotección de autenticación de API y setear el driver para Passport)
+### Editar el archivo config/auth.php (para definir la protección de autenticación de API y setear el driver para Passport)
 ```bash
 'guards' => [
     'web' => [
